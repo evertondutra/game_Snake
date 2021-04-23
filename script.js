@@ -7,6 +7,9 @@ snake[0] = {
     y: 8 * box
 }
 
+let direction = "right";
+
+
 function criarBG() {
     context.fillStyle = "lightgreen"
     context.fillRect(0, 0, 16 * box, 16 * box)
@@ -19,5 +22,10 @@ function criarSnake(){
     }
 }
 
-criarBG();
-criarSnake();
+function initgame(){
+    criarBG();
+    criarSnake();
+}
+
+let game = setInterval(initgame, 100)
+
