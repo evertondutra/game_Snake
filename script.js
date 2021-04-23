@@ -35,6 +35,16 @@ function initgame(){
     if(direction == "up") snakeY -= box;
     if(direction == "down") snakeY += box;
 
+    snake.pop();
+
+    /* Criando uma nova cabeça */
+    let newHead ={
+        x: snakeX,
+        y: snakeY
+    } 
+
+    snake.unshift(newHead);
+
 }
 
 let game = setInterval(initgame, 100)
