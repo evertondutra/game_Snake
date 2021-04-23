@@ -25,6 +25,9 @@ function criarSnake(){
 function initgame(){
     criarBG();
     criarSnake();
+
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y
 }
 
 let game = setInterval(initgame, 100)
