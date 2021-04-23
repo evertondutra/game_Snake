@@ -22,6 +22,16 @@ function criarSnake(){
     }
 }
 
+document.addEventListener("keydown", update);
+
+function update(event){
+    if(event.keyCode == 37 && direction != "rigth") direction = "left";
+    if(event.keyCode == 38 && direction != "down") direction = "up";
+    if(event.keyCode == 39 && direction != "left") direction = "rigth";
+    if(event.keyCode == 40 && direction != "up") direction = "down";
+}
+
+
 function initgame(){
     criarBG();
     criarSnake();
@@ -30,7 +40,7 @@ function initgame(){
     let snakeY = snake[0].y
 
     /*coordenadas da snake */
-    if(direction == "right") snakeX += box;
+    if(direction == "rigth") snakeX += box;
     if(direction == "left") snakeX -= box;
     if(direction == "up") snakeY -= box;
     if(direction == "down") snakeY += box;
