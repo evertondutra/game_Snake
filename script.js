@@ -25,9 +25,16 @@ function criarSnake(){
 function initgame(){
     criarBG();
     criarSnake();
-
+    /* ponto de partida da snake */ 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y
+
+    /*coordenadas da snake */
+    if(direction == "right") snakeX += box;
+    if(direction == "left") snakeX -= box;
+    if(direction == "up") snakeY -= box;
+    if(direction == "down") snakeY += box;
+
 }
 
 let game = setInterval(initgame, 100)
