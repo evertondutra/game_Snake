@@ -8,6 +8,10 @@ snake[0] = {
 }
 
 let direction = "right";
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.florr(Math.random() * 15 + 1) * box
+}
 
 
 function criarBG() {
@@ -21,6 +25,13 @@ function criarSnake(){
         context.fillRect(snake[i].x, snake[i].y, box, box)
     }
 }
+
+
+function drawFood(){
+    context.fillStyle = "red";
+    context.fillRect()
+}
+
 
 document.addEventListener("keydown", update);
 /* direcionamento com as teclas */
