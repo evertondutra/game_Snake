@@ -10,7 +10,7 @@ snake[0] = {
 let direction = "right";
 let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
-    y: Math.florr(Math.random() * 15 + 1) * box
+    y: Math.floor(Math.random() * 15 + 1) * box
 }
 
 
@@ -29,7 +29,7 @@ function criarSnake(){
 
 function drawFood(){
     context.fillStyle = "red";
-    context.fillRect()
+    context.fillRect(food.x, food.y, box, box)
 }
 
 
@@ -52,6 +52,7 @@ function initgame(){
 
     criarBG();
     criarSnake();
+    drawFood();
     /* ponto de partida da snake */ 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y
