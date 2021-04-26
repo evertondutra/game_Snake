@@ -6,4 +6,5 @@ body{
     align-items: center;
     flex-direction: column;
     color: rgb(4, 59, 4);
+    font-size: 25px;
 }
